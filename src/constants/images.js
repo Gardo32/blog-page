@@ -1,4 +1,4 @@
-import logo from '../assets';
+import logo from '../assets/Logo.svg';
 
 const images = {
     logo,
