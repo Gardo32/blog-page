@@ -1,8 +1,14 @@
 import React from 'react'
+import Head from './Head'
+import Foot from './Foot'
 
-const MainLayout = () => {
+const MainLayout = ({children}) => {
   return (
-    <div>MainLayout</div>
+    <div>
+      <Head />
+        {children}
+      <Foot />
+    </div>
   )
 }
 
