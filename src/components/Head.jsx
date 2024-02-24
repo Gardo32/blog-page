@@ -2,7 +2,14 @@ import React from 'react'
 
 const Head = () => {
   return (
-    <div>Head</div>
+    <section>
+      <header>
+        <div>
+          <img src='' alt='logo' />
+        </div>
+        <div></div>
+      </header>
+    </section>
   )
 }
 
