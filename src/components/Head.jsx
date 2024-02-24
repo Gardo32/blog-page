@@ -1,11 +1,12 @@
 import React from 'react'
+import { images } from '../constants'
 
 const Head = () => {
   return (
     <section>
       <header>
         <div>
-          <img src='' alt='logo' />
+          <img src={images.logo} alt='logo' />
         </div>
         <div></div>
       </header>
