@@ -1,5 +1,7 @@
 import React from 'react'
 import { images } from '../constants'
+import { IoMdMenu, IoMdClose } from "react-icons/io";
+
 
 const navItemInfo = [
   {name: 'Home'},
@@ -21,13 +23,25 @@ const NavItem = ({name}) => {
 }
 
 const Head = () => {
+const [navIsVisible, setnavIsVisible] = React.useState(false)
+const naVvisibility = () => {
+  setnavIsVisible((curState) => {
+    return !curState
+  
+  })
+}
+
+
   return (
     <section>
       <header className='container mx-auto px-5 flex justify-between py-4 items-center'>
         <div>
-          <img src={images.logo} alt='logo' />
+          <img className='w-16' src={images.logo} alt='logo' />
         </div>
-        <div className='flex gap-x-9 items-center'>
+        <div>
+          {navIsVisible ? <IoMdClose onClick={naVvisibility} className='w-6 h-6' /> : <IoMdMenu onClick={naVvisibility} className='w-6 h-6' />}
+        </div>
+        <div className={`${navIsVisible ? 'right-0' : 'right-full'} flex flex-col w-full lg:w-auto justify-center lg:justify-end lg:flex-row fixed top-0 bottom-0 -right-full lg:static flex gap-x-9 items-center`}>
           <ul className='flex gap-x-2 font-semibold'>
              {navItemInfo.map((item) => (
               <NavItem key={item.name} name={item.name} />
