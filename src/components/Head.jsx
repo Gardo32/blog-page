@@ -7,7 +7,7 @@ import { IoMdArrowDropdown } from "react-icons/io";
 const navItemInfo = [
   {name: 'Home', type: "link" },
   {name: 'Articles', type: "link" },
-  {name: 'Pages', type: "dropdown", items: ['About us , Contact us'] },
+  {name: 'Pages', type: "dropdown", items: ['About us' , 'Contact us'] },
   {name: 'Pricing', type: "link" },
   {name: 'Faq', type: "link" },
 ]
@@ -20,13 +20,22 @@ const NavItem = ({item}) => {
       {item.name}
     </a>
     <span className='text-blue-500 absolute transition-all duration-500 font-bold right-0 top-0 group-hover:right-[90%] opacity-0 group-hover:opacity-100'>
-      /</span> </> : 
+      /</span> </> 
+      : 
       <>
        <a href='/' className='px-4 py-2'> 
         {item.name}
       </a>
-      <div className='hidden trans'>
-
+      <div className='hidden transition-all duration-500 pt-4 absolute bottom-0 right-0 transform translate-y-full group-hover:block w-max'>
+        <ul className='flex flex-col shadow-lg rounded-lg overflow-hidden'>
+          {item.items.map((page) => (
+            
+              <a href='/' className='px-4 py-2 hover:bg-dark-hard hover:text-white text-white lg:text-dark-hard transition-all duration-300'>
+                {page}
+              </a>
+            
+          ))}
+        </ul>
       </div>
       </>
       }
