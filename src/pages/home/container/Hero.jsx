@@ -14,7 +14,7 @@ const Hero = () => {
                     <FiSearch className='absolute top-1/2 left-3 transform -translate-y-1/2 text-[#959EAD]' />
                     <input className='placeholder:font-bold font-semibold text-dark-soft placeholder:text-[#959ead] rounded-lg pl-12 pr-3 w-full py-3 focus:outline-none shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] md:py-4' type="text" placeholder='Search'/>
             </div>
-            <button className='w-full bg-primary text-white font-semibold rounded-lg px-5 py-3 md:absolute md:left-3/4 md:top-1/2 md:-translate-y-1/2 md:w-fit md:py-2 '>
+            <button className='w-full bg-primary text-white font-semibold rounded-lg px-5 py-3 md:absolute md:-right-1 md:top-1/2 md:-translate-y-1/2 md:w-fit md:py-2 '>
                 Search
             </button>
             </div>
