@@ -31,7 +31,7 @@ const NavItem = ({item}) => {
       </> 
       :
       <div className='flex flex-col items-center' onClick={handleDropdown}>
-       <button className='px-4 py-2'> 
+       <button className='px-4 py-2 flex flex-row items-center'> 
         <span>{item.name}</span>
         <IoMdArrowDropdown />
       </button>
