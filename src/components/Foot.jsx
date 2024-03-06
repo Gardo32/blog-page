@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  AiOutlineTwitter,
-  AiFillYoutube,
-  AiFillInstagram,
-  AiFillHeart,
-} from "react-icons/ai";
+import {AiOutlineTwitter,AiFillYoutube,AiFillInstagram,AiFillHeart,} from "react-icons/ai";
 import { FaFacebook } from "react-icons/fa";
 import { BsTelegram } from "react-icons/bs";
 
