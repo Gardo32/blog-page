@@ -26,7 +26,7 @@ return (
                                 month: "short",
                                 year: "numeric",
                                 })}
-                            </span>
+                            </span>-
                         </div>
                     </div>
                 ))}
@@ -35,8 +35,8 @@ return (
                 Tags
             </h2>
             <div className="flex flex-wrap gap-x-2 gap-y-2 mt-4">
-                {tags.map((item) => (
-                    <Link to="/" className="inline- rounded-md px-3 py-1.5 bg-primary font-roboto text-xs text-white md:text-sm">
+                {tags.map((item, index) => (
+                    <Link to="/" key={index} className="inline- rounded-md px-3 py-1.5 bg-primary font-roboto text-xs text-white md:text-sm">
                         {item}
                     </Link>
                 ))}
