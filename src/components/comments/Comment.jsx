@@ -1,7 +1,7 @@
 import React from "react";
 import { FiMessageSquare, FiEdit2, FiTrash } from "react-icons/fi";
 
-import { images, stables } from "../../constants";
+import { images } from "../../constants";
 import CommentForm from "./CommentForm";
 
 const Comment = ({
@@ -34,11 +34,7 @@ const Comment = ({
       id={`comment-${comment?._id}`}
     >
       <img
-        src={
-          comment?.user?.avatar
-            ? stables.UPLOAD_FOLDER_BASE_URL + comment.user.avatar
-            : images.userImage
-        }
+        src={images.logo}
         alt="user profile"
         className="w-9 h-9 object-cover rounded-full"
       />

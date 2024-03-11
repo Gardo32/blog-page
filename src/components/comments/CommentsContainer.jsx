@@ -37,11 +37,20 @@ import Comment from './Comment';
     };
   return (
     <div className={`${className}`}>
-        <CommentForm btnLabel="Send" formSubmitHanlder={(value) => addCommentsHandler(value)} 
+        <CommentForm 
+        btnLabel="Send" 
+        formSubmitHanlder={(value) => addCommentsHandler(value)} 
         />
         <div className='space-y-4 mt-8'>
           {mainComments.map((comment) => () => (
-            <Comment comment={comment} logginedUserId={loginedUserId} affectedComment={affectedComment} setAffectedComment={setaffectedComment}/>
+            <Comment 
+            key={comment._id}
+            comment={comment} 
+            logginedUserId={loginedUserId} 
+            affectedComment={affectedComment} 
+            setAffectedComment={setaffectedComment}
+            addComment={addCommentsHandler}
+            />
           ))}
         </div>
     </div>
