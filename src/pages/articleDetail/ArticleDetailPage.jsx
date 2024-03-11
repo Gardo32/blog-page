@@ -76,7 +76,7 @@ const ArticleDetailPage = () => {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim feugiat scelerisque. Etiam ac ornare sapien. Proin leo tortor, sodales id maximus id, mattis non augue. Maecenas aliquet efficitur nisl eget dignissim. Integer tortor est, cursus id dapibus vitae, vulputate in eros. Donec eu scelerisque ipsum. Nam malesuada finibus dictum. Sed quis est at purus euismod varius. Fusce ut ante ac lectus fringilla pharetra non nec diam.
                 </p>
               </div>
-              <CommentsContainer className="mt-10" />
+              <CommentsContainer className="mt-10" loginedUserId="a" />
              </article>
              <SuggestedPosts header="Latest Article" 
              posts={postsData} 
