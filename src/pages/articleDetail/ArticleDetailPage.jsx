@@ -5,6 +5,7 @@ import BreadCrumbs from '../../components/BreadCrumbs'
 import { images } from '../../constants'
 import SuggestedPosts from './container/SuggestedPosts';
 import CommentsContainer from '../../components/comments/CommentsContainer';
+import SocialShareButtons from '../../components/SocialShareButtons';
 
 
 const breadCrumbsData = [
@@ -78,11 +79,21 @@ const ArticleDetailPage = () => {
               </div>
               <CommentsContainer className="mt-10" loginedUserId="a" />
              </article>
-             <SuggestedPosts header="Latest Article" 
+             <div>
+             <SuggestedPosts 
+             header="Latest Article" 
              posts={postsData} 
              tags={tagsData}
              className="mt-8 lg:mt-0 max-w-xs"
               />
+             </div>
+             <div className='mt-7 '>
+              <h2 className='font-roboto font-medium text-dark-hard mb-4 md:text-xl'>Share On</h2>
+              <SocialShareButtons 
+              url={encodeURI("https://www.google.com/")}
+              title={encodeURIComponent("Google")}
+              />
+             </div>
         </section>
     </MainLayout>
   )
